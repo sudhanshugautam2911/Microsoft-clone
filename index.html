@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microsoft Clone</title>
+    
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/index-68853d1b.css">
+</head>
+
+<body>
+    <div class="">
+
+        <!-- Navbar -->
+        <div class="navbar flex justify-between items-center px-4 md:p-2 md:px-16 shadow-sm">
+            <div class="flex items-center md:order-2 space-x-2">
+                <div class="hamburger inline-block p-4 cursor-pointer md:hidden" onclick="myFunction()">
+                    <div class="line h-0.5 w-6 my-1 bg-black"></div>
+                    <div class="line h-0.5 w-6 my-1 bg-black"></div>
+                    <div class="line h-0.5 w-6 my-1 bg-black"></div>
+                </div>
+                <div class="search md:hidden rotate-90 px-3"><i class="bi bi-search"></i></div>
+            </div>
+            <div class="logo md:order-1 flex cursor-pointer">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAAAuCAYAAABK69fpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTAwQkM2Mzk4NDBBMTFFNjhDQkVCOTdDMjE1NkM3RkQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTAwQkM2Mzg4NDBBMTFFNjhDQkVCOTdDMjE1NkM3RkQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMkM5MzFBNDcwQTExMUU2QUVERkExNDU3ODU1M0I3QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMkM5MzFBNTcwQTExMUU2QUVERkExNDU3ODU1M0I3QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgQJy/MAAAxESURBVHja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" class="w-32 md:p-2" alt="">
+                <div
+                    class="features md:flex md:items-center md:mx-6 md:space-x-5 absolute md:static inset-0   bg-light-white md:bg-white hidden md:translate-x-0 cursor-pointer p-6 md:p-0 space-y-6 md:space-y-0 mt-[54px] md:mt-0 w-full text-base" id="item">
+                    <div class="fitem hover:underline hover:underline-offset-[6px]">Microsoft 365</div>
+                    <hr>
+                    <div class="fitem hover:underline hover:underline-offset-[6px]">Teams</div>
+                    <hr>
+                    <div class="fitem hover:underline hover:underline-offset-[6px]">Windows</div>
+                    <hr>
+                    <div class="fitem hover:underline hover:underline-offset-[6px]">Surface</div>
+                    <hr>
+                    <div class="fitem hover:underline hover:underline-offset-[6px]">Xbox</div>
+                    <hr>
+                    <div class="fitem hover:underline hover:underline-offset-[6px]">Support</div>
+                </div>
+            </div>
+            <div class="logo md:order-2 flex gap-x-5 items-center cursor-pointer">
+                <div class="hidden md:block mx-3 text-sm">All microsoft <i
+                        class="ri-arrow-drop-down-line text-xl absolute"></i></div>
+                <div class="search hidden md:block rotate-90"><i class="bi bi-search"></i></div>
+                <!-- cart and account -->
+                <div><i class="bi bi-cart3"></i></div>
+                <div class="text-xl"><i class="bi bi-person-circle"></i></div>
+
+            </div>
+        </div>
+
+        <!-- landing Page1 -->
+        <div class="slider flex flex-col-reverse md:flex-row md:items-center md:relative">
+            <div class="left p-6 md:absolute space-y-4 md:p-9 shadow-md md:shadow-none md:ml-16">
+                <h1 class="font-semibold font-sans text-2xl">Microsoft 365</h1>
+                <p>Everything you need to achieve more in less time</p>
+                <div class="flex flex-row items-center space-x-6 pb-8 pt-3 ">
+                    <button class="bg-[#0166b8] hover:bg-[#015498] text-white font-bold p-2 px-3">For one person</button>
+                    <p class="text-blue-500 font-semibold md:text-black hover:underline cursor-pointer">For up to six people ></p>
+                </div>
+            </div>
+            <div class="right origin-right">    
+                <img class="" src="/assets/bg-94c0cf4f.avif" alt="">
+            </div>
+
+        </div>
+
+        <!-- icons -->
+        <div class="promo flex flex-col md:flex-row items-center gap-y-9 p-10 md:justify-center md:space-x-14">
+            <div class="item flex flex-col items-center space-y-3 ">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAABgUExURcDAwICAgH5+fn9/f6ioqP7+/v///6emp7+/v3h4eAAAAEZGRkdHRwEBAVBQUE9PT05OTgICAnt7e0hISElJSU1NTUtLS4aGhkxMTKmpqYeHh3p6eoGBgXd3d729vb6+vmnUTOEAAAABYktHRAZhZrh9AAAAB3RJTUUH5wESEDEeIJGunwAAANlJREFUOMvtldsOgjAQRLddGHS1FBURvP7/X9p6A7Yk+miM56VhMmyzvUyJjDU8xGY5ipHCxvKM5qJZAMux4kTmxLdxSAl4cUOCaMkmFSug0pozsaLCx4qarzeGtvlvfGN0ev8njCvHtE6O2Qao9c+ypmzrfRnwT5odsGv770jZdARFjpSoTRjzSTd1jR9NU7Z7YK+m9m0Rm1HUaTMiBzJJ11We3pkPF/xv/A2j0XcmJm6lD4o7TlQMibsVeURyX/GUpHAM+7vnleEuhP05PBhDmDOgY/V+mMsV52c8pQNU82MAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDEtMThUMTY6NDk6MzArMDA6MDDpGn7mAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTAxLTE4VDE2OjQ5OjMwKzAwOjAwmEfGWgAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyMy0wMS0xOFQxNjo0OTozMCswMDowMM9S54UAAAAASUVORK5CYII=" alt="">
+                <span class="font-semibold text-blue-500 underline cursor-pointer">Choose your Microsoft 365</span>
+            </div>
+            <div class="item flex flex-col items-center space-y-3">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAHXUExURf7+/v////39/fLy8u7u7vDw8PX19ff39/j4+Ofn597e3tPT08vLy7+/v7Ozs6SkpJmZmY2NjYSEhHh4eG9vb19fX1VVVUdHRz4+PiwsLCMjIxUVFQwMDA4ODggICBMTE21tbdTU1GNjYz8/PzY2NisrKx0dHQYGBgMDAwICAgEBAQAAACUlJTIyMjs7O0tLS05OTgkJCVhYWBYWFiEhIS8vLzk5OUhISFJRUl1dXWZmZnFxcXt7e4uLi5WVlaCgoKmpqbe3t8DAwNLS0tnZ2ePj4+rq6vPz8/n5+Q8PD+zs7BoaGh8fH+Hh4fHx8fb29vz7/LKysgUFBXl5ea+vr4eHh6Kiojo6OuXl5fr6+tfX1+np6RERETExMa2trXNzc3JycnR0dKqqqjc3NxgYGNzc3AoKCkZGRqurq4mJiRcXF76+voiIiB4eHg0NDc3NzVZWVn5+fqOjo5ubm4yMjJeXl3BwcCgoKCoqKlBQUJycnO/v79vb28nJyWlpaaemp4WFhaGhobm5uaioqLi4uM7Ozk9PT1xcXGpqarS0tMjIyNbW1iYmJjg4OMbGxtra2szMzIKCgi0tLRsbG0FBQQcHB+jo6NDQ0MHBwaysrJ6enlRUVD09Pc7v8g8AAAABYktHRAH/Ai3eAAAAB3RJTUUH5wESEDEeIJGunwAAAllJREFUOMvVlPtXEkEUx2dmYRchzCISUyCRXJbBoIiyLHthbEQwiQSbQvkIzYCytEhK7V32tqys/thmFxarw6a/dbpnd8/sns/M9873zl0A/uuAaiB5uAm8OmfDNdWV/woyNHR6lquDEEADxzL6JqNpi7l5a8u27ZYd1p2ttrZd7R12h3M3qoOdri73nm4n7xG8XiyHV8CCo6Pb17PXH9jnXAf3Y0fwQOjgod7DR/qOHus/fuLkqdPhgTMR1iDCgbO2Kkiv6LnY+XgkYahmrTwQQoTI1sALgxakfjYLLvibczUpZZD0DCn2yNNS+KImiNL2jPIuQcgF+EsaIIAZexrVMiLDI1miCeY8yXrqQ/gygo0DwCs4B9UKjeKxxphIwfH2YRVMZEd0jUEJAiM/EVWlr+YnoUQ0lKcwTikDuuKYcA0RqSFHU/Ty0zooIYoSF38dEI3dkHSw4CnQQlEw7ityUGrMwXDJz4RiTbI0vIFvAg2QpuWZEW95bytpzDrm5No3BA13cDPg7pb1iPbNPcEEgYYy6CllCOjn52mZKs4yAlrgfX6Siul9ZWr9A7ygyYFFYUk+pC34IQKPcCxg7SvMPX7y1Khn65sCSjMv4BwrUpPKbQkQf+bM41rYi+7W5y9mZhdfLr+qRERgcA+WXo8HrMk3+C21mnn33jw1/2HU2mtbCfJyZ9FbyH/MfvKvxgJdoSAveKfDANbagYoRjol+/vJ17VvK4vr+Y2Uiv1pcg0CMVEzLnZLWPqBkYJkIt15aTVBuRPKLcdpg9fhsDIpkk+Cff8l/CP4EfAZnVhGjkMcAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDEtMThUMTY6NDk6MzArMDA6MDDpGn7mAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTAxLTE4VDE2OjQ5OjMwKzAwOjAwmEfGWgAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyMy0wMS0xOFQxNjo0OTozMCswMDowMM9S54UAAAAASUVORK5CYII=" alt="">
+                <span class="font-semibold text-blue-500 underline cursor-pointer">Explore Surface devices</span>
+            </div>
+            <div class="item flex flex-col items-center space-y-3">
+                <img src="data:image/png;base64,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" alt="">
+                <span class="font-semibold text-blue-500 underline cursor-pointer">Buy Xbox games</span>
+            </div>
+            <div class="item flex flex-col items-center space-y-3">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAABgUExURcDAwICAgH5+fn9/f6ioqP7+/v///6emp7+/v3h4eAAAAEZGRkdHRwEBAVBQUE9PT05OTgICAnt7e0hISElJSU1NTUtLS4aGhkxMTKmpqYeHh3p6eoGBgXd3d729vb6+vmnUTOEAAAABYktHRAZhZrh9AAAAB3RJTUUH5wESEDEeIJGunwAAANpJREFUOMvtldsOgjAQRLddGHS1FBURvP7/X9p6A7Yk+miM54V0Mt1myXZKZKzhITbLUYwUNpZnNBfNAliOFScyJ759h5SAFzckiJZsUrECKq05EysqfKyo+XpjaJv/xjdGNTviJowrx7ROxmwD1HqzrCnbel8G/JNmB+zafh0pm46gyJEStQljPummrvGjY8p2D+zV0b4tYjOKOm1G5EAm6brK0zvz4Q//G3/DaPSdiYlb6UFxx4mKIXG3Io9I7iuetM/FsL97XhnuQtifw4MxhDkDOlbvh7lcAednPKWY+p6VAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTAxLTE4VDE2OjQ5OjMwKzAwOjAw6Rp+5gAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wMS0xOFQxNjo0OTozMCswMDowMJhHxloAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjMtMDEtMThUMTY6NDk6MzArMDA6MDDPUueFAAAAAElFTkSuQmCC" alt="">
+                <span class="font-semibold text-blue-500 underline cursor-pointer">Get Windows 11</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <!-- <script src="myScript.js"></script> -->
+    <script>
+        const element = document.getElementById('item');
+
+function myFunction() {
+    document.getElementById('item').style.transform = "translateX(0px)"
+
+    if (element.style.display === "block") {
+        element.style.display = "none";
+    } else {
+        element.style.display = "block";
+    }
+
+    console.log('done')
+}
+    </script>
+</body>
+
+</html>
